@@ -1,0 +1,12 @@
+{
+  {
+    "title" : "Cover",
+    "type"  : "cover",
+    "url"   : "html.html"
+  },
+  {
+    "title" : "edi",
+    "type"  : "edi",
+    "url"   : "html.html"
+  },
+};
