@@ -2,11 +2,11 @@
   {
     "title" : "Cover",
     "type"  : "cover",
-    "url"   : "html.html"
+    "url"   : "demopage.html"
   },
   {
     "title" : "edi",
     "type"  : "edi",
-    "url"   : "html.html"
+    "url"   : "demopage.html"
   },
 };

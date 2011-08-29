@@ -6,8 +6,10 @@
   Events
   */
   events = {
-    init    : 'leaf.init',
-    paging  : 'leaf.paging'
+    onInit          : 'leaf.init',
+    onPaginate      : 'leaf.paginate',
+    beforePaginate  : 'leaf.beforePaginate',
+    afterPaginate   : 'leaf.beforePaginate'
   },
 
   options = {},
@@ -21,7 +23,7 @@
     
   },
   
-  
+
  
   onLoadPagesJSON = function( _data ){
     if (debugmode) console.log( 'onLoadPages')
@@ -32,10 +34,12 @@
   */
   
   methods = {
-   init : function( _json ){
-     if (debugmode) console.log("init")
+   init : function( $s, _json ){
+     if (debugmode) console.log("init" + _json)
      pages = [];
-     $.getJSON( _json, function(data) { console.log( "loadjsons")});
+     $.getJSON( _json, function(data) { 
+       console.log( "loadjsons");
+     });
    },
    
    go : function( pageid){
@@ -109,13 +113,16 @@
 		},
 		
 		selectors: {
-			container: '.deck-container'
+			container: '.deck-container',
+			pageHolder: '#deck-pageholder'
 		},
 		
 		keys: {
 			next: 39, // right arrow key
 			previous: 37 // left arrow key
-		}
+		},
+		
+		transition: 'none'
 	};
 
 })(jQuery, 'leaf', document);
